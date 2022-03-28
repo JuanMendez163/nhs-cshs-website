@@ -13,3 +13,7 @@ body {
     color: #333;
     background: white;
 }
+
+img {
+    max-width: 100%;
+}
