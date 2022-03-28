@@ -27,14 +27,20 @@ ul {
 }
 
 .container {
-    margin: 0px 10px 10px 10px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 30px;
 }
 
-/* Navigation Bar */
+/* Navigation Bar */ /* Need to make this responsive */
 .navbar {
     background: #3474e6;
     color: #fff;
     height: 60px;
+}
+
+.container-nav {
+    margin: 0px 10px 10px 10px;
 }
 
 .navbar .name {
@@ -53,7 +59,7 @@ ul {
     color: lightblue;
 }
 
-.navbar .container {
+.navbar .container-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -66,4 +72,35 @@ ul {
 
 .navbar ul li {
     margin-left: 20px;
+}
+
+/* About Section */
+.header {
+    background-color: #0151cc;
+    color: #fff;
+    min-height: 300px;
+}
+
+.header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.header img {
+    max-width: 400px;   
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media(max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        padding-top: 20px;
+        text-align: center;
+    }
 }
