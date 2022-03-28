@@ -37,6 +37,9 @@ ul {
     background: #3474e6;
     color: #fff;
     height: 60px;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 .container-nav {
@@ -72,6 +75,10 @@ ul {
 
 .navbar ul li {
     margin-left: 20px;
+}
+
+.main {
+    margin-top: 60px;
 }
 
 /* About Section */
