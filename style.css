@@ -111,3 +111,9 @@ ul {
         text-align: center;
     }
 }
+
+.main .main-header {
+    text-align: center;
+    font-size: 45px;
+    margin-top: 15px;
+}
