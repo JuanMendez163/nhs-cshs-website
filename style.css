@@ -170,7 +170,7 @@ ul {
     text-align: center;
 }
 
-/* Number text (1/3 etc) */
+/* Number text (1/3 etc) */ /* Fix issue of overlap over navbar */
 .main .slideshow-container .numbertext {
     color: black;
     font-size: 12px;
@@ -204,4 +204,48 @@ ul {
 @keyframes fade {
     from {opacity: .4}
     to {opacity: 1}
+}
+
+/* Accordion */
+
+/* Style the buttons that are used to open and close the accordion panel */
+.main .accordion {
+    background-color: #0151cc;
+    color: black;
+    cursor: pointer;
+    padding: 20px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.main button.accordion::after {
+    content: '\002B';
+    color: black;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover, .active.accordion {
+    background-color: lightblue;
+}
+
+.main button.active.accordion::after {
+    content: '\002D';
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.main .panel {
+    padding: 0 18px;
+    background-color: lightblue;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
 }
