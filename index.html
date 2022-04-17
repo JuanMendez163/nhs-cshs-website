@@ -4,6 +4,8 @@
         <meta charset = "UTF-8">
         <title>NHS CSHS</title>
         <link rel = "stylesheet" href = "./style.css"/>
+        <!-- Add icon library -->
+        <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 
     <body>
@@ -138,10 +140,10 @@
 
                 for (i = 0; i < acc.length; i++) {
                     acc[i].addEventListener("click", function() {
-                        /* Toggle between adding and removing the "active" class, to highlight the button that controls the panel */
+                        // Toggle between adding and removing the "active" class, to highlight the button that controls the panel
                         this.classList.toggle("active");
 
-                        /* Toggle between hiding and showing the active panel */
+                        // Toggle between hiding and showing the active panel
                         var panel = this.nextElementSibling;
                         if (panel.style.maxHeight) {
                             panel.style.maxHeight = null;
@@ -152,6 +154,12 @@
                 }
             </script>
         </div>
+
+        <!-- Social Media Buttons -->
+
+        <!-- Add font awesome icons -->
+        <a href = "https://twitter.com/newtownctcshs" target = "_blank" rel = "noopener noreferrer" class = "fa fa-3x fa-twitter"></a>
+        <a href = "https://www.instagram.com/newtownctcshs/" target = "_blank" rel = "noopener noreferrer" class = "fa fa-3x fa-instagram"></a>
 
     </body>
 </html>
