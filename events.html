@@ -43,9 +43,105 @@
                             Add information here
                         </p>
                     </div>
-                    <img src = "./assets/1280px--Insert_image_here-.svg.png" alt = "Picture of CSHS members"/>
+                    <img src = "./assets/1280px--Insert_image_here-.svg.png" alt = "IDK" onclick = "openModal(); currentSlide(1)" class = "hover-shadow"/>
                 </div>
             </header>
+
+            <!-- Lightbox for Event 1 -->
+            <div id = "myModal" class = "modal">
+                <span class = "close cursor" onclick = "closeModal()">&times;</span>
+                <div class = "modal-content">
+              
+                  <div class = "mySlidesL">
+                    <div class = "numbertextL">1 / 4</div>
+                    <img src = "./assets/1280px--Insert_image_here-.svg.png" style = "width:100%" alt = "IDK">
+                  </div>
+              
+                  <div class = "mySlidesL">
+                    <div class = "numbertextL">2 / 4</div>
+                    <img src = "./assets/1280px--Insert_image_here-.svg.png" style = "width:100%" alt = "IDK">
+                  </div>
+              
+                  <div class = "mySlidesL">
+                    <div class = "numbertextL">3 / 4</div>
+                    <img src = "./assets/1280px--Insert_image_here-.svg.png" style = "width:100%" alt = "IDK">
+                  </div>
+
+                  <div class = "mySlidesL">
+                    <div class = "numbertextL">4 / 4</div>
+                    <img src = "./assets/1280px--Insert_image_here-.svg.png" style = "width:100%" alt = "IDK">
+                  </div>
+              
+                  <!-- Next/previous controls -->
+                  <a class = "prevL" onclick = "plusSlides(-1)">&#10094;</a>
+                  <a class = "nextL" onclick = "plusSlides(1)">&#10095;</a>
+              
+                  <!-- Caption text -->
+                  <div class = "caption-container">
+                    <p id = "caption"></p>
+                  </div>
+              
+                  <!-- Thumbnail image controls -->
+                  <div class = "column">
+                    <img class = "demo" src = "./assets/1280px--Insert_image_here-.svg.png" onclick = "currentSlide(1)" alt = "IDK">
+                  </div>
+              
+                  <div class = "column">
+                    <img class = "demo" src = "./assets/1280px--Insert_image_here-.svg.png" onclick = "currentSlide(2)" alt = "IDK">
+                  </div>
+              
+                  <div class = "column">
+                    <img class = "demo" src = "./assets/1280px--Insert_image_here-.svg.png" onclick = "currentSlide(3)" alt = "IDK">
+                  </div>
+              
+                  <div class = "column">
+                    <img class = "demo" src = "./assets/1280px--Insert_image_here-.svg.png" onclick = "currentSlide(4)" alt = "IDK">
+                  </div>
+                </div>
+              </div>
+
+              <script>
+                    // Open the Modal
+                    function openModal() {
+                        document.getElementById("myModal").style.display = "block";
+                    }
+                    
+                    // Close the Modal
+                    function closeModal() {
+                        document.getElementById("myModal").style.display = "none";
+                    }
+                    
+                    var slideIndex = 1;
+                    showSlides(slideIndex);
+                    
+                    // Next/previous controls
+                    function plusSlides(n) {
+                        showSlides(slideIndex += n);
+                    }
+                    
+                    // Thumbnail image controls
+                    function currentSlide(n) {
+                        showSlides(slideIndex = n);
+                    }
+                    
+                    function showSlides(n) {
+                        var i;
+                        var slides = document.getElementsByClassName("mySlidesL");
+                        var dots = document.getElementsByClassName("demo");
+                        var captionText = document.getElementById("caption");
+                        if (n > slides.length) {slideIndex = 1}
+                        if (n < 1) {slideIndex = slides.length}
+                        for (i = 0; i < slides.length; i++) {
+                            slides[i].style.display = "none";
+                        }
+                        for (i = 0; i < dots.length; i++) {
+                            dots[i].className = dots[i].className.replace(" active", "");
+                        }
+                        slides[slideIndex-1].style.display = "block";
+                        dots[slideIndex-1].className += " active";
+                        captionText.innerHTML = dots[slideIndex-1].alt;
+                    }
+                </script>
         </div>
     </body>
 </html>
