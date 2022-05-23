@@ -40,6 +40,7 @@ ul {
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 1;
 }
 
 .container-nav {
@@ -127,6 +128,7 @@ ul {
     max-width: 750px;
     position: relative;
     margin: auto;
+    z-index: 0;
 }
 
 /* Hide the images by default */
@@ -250,6 +252,12 @@ ul {
     overflow: hidden;
     max-height: 0;
     transition: max-height 0.2s ease-out;
+}
+
+/* Bullet points */
+.main .bullet {
+    list-style-type: disc; 
+    margin-left: 25px;
 }
 
 /* Social Media Buttons */
