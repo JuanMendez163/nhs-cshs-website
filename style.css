@@ -346,6 +346,7 @@ ul {
 /* Hide the slides by default */
 .mySlidesL {
     display: none;
+    background-color: #0151cc;
 }
   
 /* Next and previous buttons */
@@ -375,7 +376,7 @@ ul {
 /* On hover, add a black background color with a little bit of see-through */
 .prevL:hover,
 .nextL:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: lightblue;
 }
   
 /* Number text (1/3 etc) */
