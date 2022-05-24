@@ -344,7 +344,7 @@ ul {
 }
   
 /* Hide the slides by default */
-.mySlidesL {
+.mySlidesL, .mySlidesL2 {
     display: none;
     background-color: #0151cc;
 }
@@ -396,12 +396,12 @@ ul {
     color: white;
 }
   
-img.demo {
+img.demo, img.demo2 {
     opacity: 0.6;
 }
   
 .active,
-.demo:hover {
+.demo:hover, .demo2:hover {
     opacity: 1;
 }
   

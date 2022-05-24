@@ -54,22 +54,22 @@
               
                   <div class = "mySlidesL">
                     <div class = "numbertextL">1 / 4</div>
-                    <img src = "./assets/csnight2.JPG" style = "width: 100%;" alt = "Members helping kids with block coding">
+                    <img src = "./assets/csnight2.jpeg" style = "width: 100%;" alt = "Members helping kids with block coding">
                   </div>
               
                   <div class = "mySlidesL">
                     <div class = "numbertextL">2 / 4</div>
-                    <img src = "./assets/csnight3.JPG" style = "width: 100%;" alt = "Robot fun!">
+                    <img src = "./assets/csnight3.jpeg" style = "width: 100%;" alt = "Robot fun!">
                   </div>
               
                   <div class = "mySlidesL">
                     <div class = "numbertextL">3 / 4</div>
-                    <img src = "./assets/csnight4.JPG" style = "width: 100%;" alt = "A student doing the pixel drawing activity!">
+                    <img src = "./assets/csnight4.jpeg" style = "width: 100%;" alt = "A student doing the pixel drawing activity!">
                   </div>
 
                   <div class = "mySlidesL">
                     <div class = "numbertextL">4 / 4</div>
-                    <img src = "./assets/csnight5.JPG" style = "width: 100%;" alt = "All of the awesome members who helped out!">
+                    <img src = "./assets/csnight5.jpeg" style = "width: 100%;" alt = "All of the awesome members who helped out!">
                   </div>
               
                   <!-- Next/previous controls -->
@@ -98,9 +98,9 @@
                     <img class = "demo" src = "./assets/csnight5.JPG" onclick = "currentSlide(4)" alt = "All of the awesome members who helped out!">
                   </div>
                 </div>
-              </div>
+            </div>
 
-              <script>
+                <script>
                     // Open the Modal
                     function openModal() {
                         document.getElementById("myModal").style.display = "block";
@@ -142,7 +142,117 @@
                         captionText.innerHTML = dots[slideIndex-1].alt;
                     }
                 </script>
-        <hr>
+            <hr>
+        
+            <!-- Event 2 -->
+            <header class = "header" style = "background-color: white; color: black;">
+                <div class = "container" style = "gap: 100px;">
+                    <div>
+                        <h1>Induction 21-22</h1>
+                        <p>
+                            Induction is the event that commemorates the entrance of new members to the Computer Science Honor Society. The 2021-2022 event was
+                            the first in-person induction following the pandemic, so it certainly was special. <strong>Click the image to the right for more!</strong>    
+                        </p>
+                    </div>
+                    <img src = "./assets/induction2.jpg" alt = "Members ready to be inducted!" onclick = "openModal2(); currentSlide2(1)" class = "hover-shadow"/>
+                </div>
+            </header>
+
+            <!-- Lightbox for Event 2 -->
+            <div id = "myModal2" class = "modal">
+                <span class = "close cursor" onclick = "closeModal2()">&times;</span>
+                <div class = "modal-content">
+          
+                    <div class = "mySlidesL2">
+                        <div class = "numbertextL">1 / 4</div>
+                        <img src = "./assets/induction2.jpg" style = "width: 100%;" alt = "Members ready to be inducted!">
+                    </div>
+            
+                    <div class = "mySlidesL2">
+                        <div class = "numbertextL">2 / 4</div>
+                        <img src = "./assets/induction3.jpg" style = "width: 100%;" alt = "An inductee receiving their certificate!">
+                    </div>
+            
+                    <div class = "mySlidesL2">
+                        <div class = "numbertextL">3 / 4</div>
+                        <img src = "./assets/induction4.jpg" style = "width: 100%;" alt = "The President discussing why CS!">
+                    </div>
+
+                    <div class = "mySlidesL2">
+                        <div class = "numbertextL">4 / 4</div>
+                        <img src = "./assets/induction5.jpg" style = "width: 100%;" alt = "All the new members!">
+                    </div>
+            
+                    <!-- Next/previous controls -->
+                    <a class = "prevL" onclick = "plusSlides2(-1)">&#10094;</a>
+                    <a class = "nextL" onclick = "plusSlides2(1)">&#10095;</a>
+            
+                    <!-- Caption text -->
+                    <div class = "caption-container">
+                        <p id = "caption2"></p>
+                    </div>
+            
+                    <!-- Thumbnail image controls -->
+                    <div class = "column">
+                        <img class = "demo2" src = "./assets/induction2.jpg" onclick = "currentSlide2(1)" alt = "Members ready to be inducted!">
+                    </div>
+            
+                    <div class = "column">
+                        <img class = "demo2" src = "./assets/induction3.jpg" onclick = "currentSlide2(2)" alt = "An inductee receiving their certificate!">
+                    </div>
+            
+                    <div class = "column">
+                        <img class = "demo2" src = "./assets/induction4.jpg" onclick = "currentSlide2(3)" alt = "The President discussing why CS!">
+                    </div>
+            
+                    <div class = "column">
+                        <img class = "demo2" src = "./assets/induction5.jpg" onclick = "currentSlide2(4)" alt = "All the new members!">
+                    </div>
+                </div>
+            </div>
+
+                <script>
+                    // Open the Modal
+                    function openModal2() {
+                        document.getElementById("myModal2").style.display = "block";
+                    }
+                        
+                    // Close the Modal
+                    function closeModal2() {
+                        document.getElementById("myModal2").style.display = "none";
+                    }
+                        
+                    var slideIndex = 1;
+                    showSlides2(slideIndex);
+                        
+                    // Next/previous controls
+                    function plusSlides2(n) {
+                        showSlides2(slideIndex += n);
+                    }
+                        
+                    // Thumbnail image controls
+                    function currentSlide2(n) {
+                        showSlides2(slideIndex = n);
+                    }
+                        
+                    function showSlides2(n) {
+                        var i;
+                        var slides = document.getElementsByClassName("mySlidesL2");
+                        var dots = document.getElementsByClassName("demo2");
+                        var captionText = document.getElementById("caption2");
+                        if (n > slides.length) {slideIndex = 1}
+                        if (n < 1) {slideIndex = slides.length}
+                        for (i = 0; i < slides.length; i++) {
+                            slides[i].style.display = "none";
+                        }
+                        for (i = 0; i < dots.length; i++) {
+                            dots[i].className = dots[i].className.replace(" active", "");
+                        }
+                        slides[slideIndex-1].style.display = "block";
+                        dots[slideIndex-1].className += " active";
+                        captionText.innerHTML = dots[slideIndex-1].alt;
+                    }
+                </script>
         </div>
         
         <!-- Footer -->
